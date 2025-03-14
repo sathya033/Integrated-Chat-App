@@ -35,6 +35,12 @@ pipeline {
                 bat 'npm install'
             }
         }
+        stage('Install Angular CLI') {
+            steps {
+                bat 'npm install -g @angular/cli'
+            }
+        }
+
         stage('Build Angular App') {
             steps {
                 bat 'ng build --configuration=production'
