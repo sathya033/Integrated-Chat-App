@@ -101,6 +101,17 @@
             ],
             "scripts": []
           }
+        },
+        "e2e": {
+          "builder": "playwright-ng-schematics:playwright",
+          "options": {
+            "devServerTarget": "chat-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "chat-app:serve:production"
+            }
+          }
         }
       }
     }
