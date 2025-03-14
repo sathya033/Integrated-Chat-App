@@ -52,7 +52,7 @@
 
 pipeline {
     agent any
-    tools {nodejs "NODEJS"}
+    tools {nodejs "Node 23"}
     stages {
         stage('Build') {
             steps {
