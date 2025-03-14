@@ -32,17 +32,17 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'npm ci'
+                bat 'npm install'
             }
         }
         stage('Build Angular App') {
             steps {
-                sh 'ng build --configuration=production'
+                bat 'ng build --configuration=production'
             }
         }
         stage('Deploy App') {
             steps {
-                sh 'npm run start &'
+                bat 'npm run start &'
             }
         }
     }
